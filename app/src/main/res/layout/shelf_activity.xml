@@ -1,0 +1,73 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/Theme.IssueActivity"
+    tools:context=".ShelfActivity">
+
+    <FrameLayout
+        android:id="@+id/customViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <WebView
+            android:id="@+id/backgroundWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100"
+        tools:context=".ShelfActivity">
+
+        <WebView
+            android:id="@+id/headerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"/>
+
+        <com.bakerframework.baker.widget.SwipeRefreshScrollLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:swiperefreshscrolllayout="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            swiperefreshscrolllayout:adapter_view="@+id/shelf_view">
+
+            <com.bakerframework.baker.view.ShelfView
+                android:id="@+id/shelf_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="20dp"
+                android:paddingBottom="20dp"
+                android:clipToPadding="false"
+                android:scrollbarThumbVertical="@drawable/baker_scrollbar_vertical"
+                android:scrollbarThumbHorizontal="@drawable/baker_scrollbar_horizontal"
+                android:scrollbarStyle="outsideOverlay" />
+
+        </com.bakerframework.baker.widget.SwipeRefreshScrollLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#ff323232"/>
+
+</android.support.v4.widget.DrawerLayout>

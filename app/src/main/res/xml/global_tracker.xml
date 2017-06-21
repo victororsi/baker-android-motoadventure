@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <integer name="ga_sessionTimeout">300</integer>
+
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">true</bool>
+
+    <!-- Screen names on the reports -->
+    <screenName name="com.bakerframework.baker.activity.SplashActivity">
+        Baker Splash View
+    </screenName>
+    <screenName name="com.bakerframework.baker.activity.ShelfActivity">
+        Baker Shelf View
+    </screenName>
+    <screenName name="com.bakerframework.baker.activity.IssueActivity">
+        Baker Issue View
+    </screenName>
+    <screenName name="com.bakerframework.baker.activity.InfoActivity">
+        Baker Info View
+    </screenName>
+</resources>

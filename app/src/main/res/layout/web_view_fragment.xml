@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.xwalk.core.XWalkView
+            android:id="@+id/pageWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarThumbVertical="@drawable/baker_scrollbar_vertical"
+            android:scrollbarThumbHorizontal="@drawable/baker_scrollbar_horizontal" />
+    </RelativeLayout>
+
+</FrameLayout>
